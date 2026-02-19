@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Enter Startup Parameters</h2>
+
+    <form action="/predict" method="POST">
+        <input type="text" name="age_first_funding_year" placeholder="Age at First Funding Year">
+        <input type="text" name="age_last_funding_year" placeholder="Age at Last Funding Year">
+        <input type="text" name="age_first_milestone_year" placeholder="Age at First Milestone Year">
+        <input type="text" name="age_last_milestone_year" placeholder="Age at Last Milestone Year">
+        <input type="text" name="relationships" placeholder="Number of Relationships">
+        <input type="text" name="funding_rounds" placeholder="Number of Funding Rounds">
+        <input type="text" name="funding_total_usd" placeholder="Total Funding (USD)">
+        <input type="text" name="milestones" placeholder="Number of Milestones">
+
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+</body>
+</html>
